@@ -1,0 +1,10 @@
+#removing duplicate number from an array
+A1 = [1,2,3,1,2,4]
+def Del(A1):
+    A2 = []
+    for i in range(0,len(A1)):
+        if i  not in A2 :
+            A2.append(A1[i])
+    return A2
+print("Array 1: ",A1)
+print("After removing duplicate numbers : ",Del(A1))
