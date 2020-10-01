@@ -1,0 +1,38 @@
+#creating a linked list take input from user
+class Node:
+    def __init__(self, n):
+       self.n = n
+       self.next = None
+ 
+class B:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, n):
+        if self.last_node is None:
+            self.head = Node(n)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(n)
+            self.last_node = self.last_node.next
+ 
+    def display(self):
+        current = self.head
+        while current is not None:
+            print(current.n, end = ' ')
+            current = current.next
+ 
+a_llist = B()
+n = int(input('How many elements '))
+for i in range(n):
+    data = int(input('Enter each element: '))
+    a_llist.append(data)
+print('The linked list: ', end = '')
+a_llist.display()[10/1, 16:48] 
+Output
+Enter each element: 1
+Enter each element: 2
+Enter each element: 3
+Enter each element: 4
+The linked list: 1 2 3 4
